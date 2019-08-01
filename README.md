@@ -7,11 +7,11 @@ Processing image using ImageMagick with gorouties to run image processsing in pa
 
 ## Running ImageMagick without goroutine
 
-`Processsing took 24.7486193s`
+#### `Processsing took 24.7486193s`
 
 ## Running ImageMagick with goroutine
 
-`Processsing took 3.9396034s!`
+#### `Processsing took 3.9396034s!`
 
 <br>
 
