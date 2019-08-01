@@ -1,6 +1,6 @@
 # Muti-Magick
 
-Processing image using ImageMagick with gorouties to run image processsing in parallel
+Processing images in parallel using gorouties with ImageMagick
 <br>
 
 <img src="https://i.ibb.co/hLJJxLC/gophercises-lifting.gif" alt="drawing" width="300"/>
@@ -24,7 +24,7 @@ Processing image using ImageMagick with gorouties to run image processsing in pa
 - `cd slow/`
 - `go run slow.go`
 - This command is compressing `doge.jpg` in half 100 times
-- You will now see a directory a halfed doge's
+- You will now see `/tmp` directory a halfed doge's
 
 #### You should see a printout of `Processsing took 24.7486193s`
 
@@ -37,7 +37,7 @@ Processing image using ImageMagick with gorouties to run image processsing in pa
 - `cd ..`
 - `go run main.go`
 - This command is also compressing `doge.jpg` in half 100 times
-- You will now see another directory a halfed doge's
+- You will now see `/tmp` directory a halfed doge's
 
 #### You should see a printout of `Processsing took 3.9396034s!`
 
