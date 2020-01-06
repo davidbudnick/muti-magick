@@ -1,44 +1,14 @@
 # Muti-Magick
 
-Processing images in parallel using gorouties with ImageMagick
-<br>
+## Processing images with concurrency in goroutines with ImageMagick
 
-<img src="https://i.ibb.co/hLJJxLC/gophercises-lifting.gif" alt="drawing" width="300"/>
+**Problem:** [ImageMagick](https://imagemagick.org/index.php) is a single-threaded application used for image manipulation. This makes batch processing images time-consuming.
 
-## Running ImageMagick without goroutine
+**Solution:** Using Golang's [Concurrency](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3) to make ImageMagick a "muti-threaded" application.
 
-#### `Processsing took 24.7486193s`
+| Test Run        | Images | Time Elaped   | Test Command                           |
+| --------------- | ------ | ------------- | -------------------------------------- |
+| Concurrency     | 100    | 2.845795397s  | `cd concurrency && go run main.go`     |
+| Non-Concurrency | 100    | 14.862155041s | `cd non-concurrency && go run main.go` |
 
-## Running ImageMagick with goroutine
-
-#### `Processsing took 3.9396034s!`
-
-<br>
-
-<img src="https://i.ibb.co/0YbWR7H/mindblown.gif" alt="drawing" width="300"/>
-
-## Running the Tests
-
-### The slow test without gorouties
-
-- `cd slow/`
-- `go run slow.go`
-- This command is compressing `doge.jpg` in half 100 times
-- You will now see `/tmp` directory a halfed doge's
-
-#### You should see a printout of `Processsing took 24.7486193s`
-
-<img src="https://i.ibb.co/8sZJvZf/giphy.gif" alt="drawing" width="300"/>
-
-<br>
-
-### The fast test
-
-- `cd ..`
-- `go run main.go`
-- This command is also compressing `doge.jpg` in half 100 times
-- You will now see `/tmp` directory a halfed doge's
-
-#### You should see a printout of `Processsing took 3.9396034s!`
-
-<img src="https://i.ibb.co/jRzWfrn/giphy-1.gif" alt="drawing" width="400"/>
+![gophereartrumpet](https://user-images.githubusercontent.com/18271248/71789087-27857100-2fee-11ea-8e10-3c9ad839be3c.jpg)
